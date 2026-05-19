@@ -145,7 +145,7 @@ GET http://localhost:8080/api/transactions/balance
 
 **Pratik Jadhav**
 - GitHub: [@pratikdjadhav](https://github.com/pratikdjadhav)
-- LinkedIn: [Pratik Jadhav](https://linkedin.com/in/pratikdjadhav)
+- LinkedIn: [Pratik Jadhav](https://linkedin.com/in/jadhavpratikd)
 
 ---
 
