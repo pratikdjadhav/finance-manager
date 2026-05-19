@@ -133,7 +133,7 @@ GET http://localhost:8080/api/transactions/balance
 
 ## 🔮 Upcoming Features
 
-- [ ] JWT Authentication (Login/Register)
+- [✔] JWT Authentication (Login/Register)
 - [ ] User wise transactions
 - [ ] Monthly reports
 - [ ] Exception handling
