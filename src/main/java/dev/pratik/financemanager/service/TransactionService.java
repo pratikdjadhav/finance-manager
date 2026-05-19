@@ -1,5 +1,6 @@
 package dev.pratik.financemanager.service;
 
+import dev.pratik.financemanager.exception.ResourceNotFoundException;
 import dev.pratik.financemanager.model.Transaction;
 import dev.pratik.financemanager.model.TransactionType;
 import dev.pratik.financemanager.repository.TransactionRepository;
@@ -50,5 +51,28 @@ public class TransactionService {
                 .mapToDouble(Transaction::getAmount)
                 .sum();
         return income - expense;
+    }
+
+    // Get transaction by ID
+    public Transaction getTransactionById(Long id) {
+        return transactionRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "Transaction with id " + id + " not found"));
+    }
+
+    // Update a transaction
+    public Transaction updateTransaction(Long id, Transaction updatedTransaction) {
+        Transaction existing = transactionRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException(
+                        "Transaction with id " + id + " not found"));
+
+        existing.setTitle(updatedTransaction.getTitle());
+        existing.setAmount(updatedTransaction.getAmount());
+        existing.setType(updatedTransaction.getType());
+        existing.setCategory(updatedTransaction.getCategory());
+        existing.setDate(updatedTransaction.getDate());
+        existing.setNote(updatedTransaction.getNote());
+
+        return transactionRepository.save(existing);
     }
 }

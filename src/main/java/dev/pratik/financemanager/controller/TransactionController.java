@@ -60,4 +60,21 @@ public class TransactionController {
         return ResponseEntity.ok(
                 transactionService.getTotalBalance());
     }
+
+    // Get transaction by ID
+    @GetMapping("/{id}")
+    public ResponseEntity<Transaction> getTransactionById(
+            @PathVariable Long id) {
+        return ResponseEntity.ok(
+                transactionService.getTransactionById(id));
+    }
+
+    // Update transaction
+    @PutMapping("/{id}")
+    public ResponseEntity<Transaction> updateTransaction(
+            @PathVariable Long id,
+            @RequestBody Transaction transaction) {
+        return ResponseEntity.ok(
+                transactionService.updateTransaction(id, transaction));
+    }
 }
