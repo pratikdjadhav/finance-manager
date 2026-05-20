@@ -237,7 +237,7 @@ Response:
 
 **Pratik Jadhav**
 - GitHub: [@pratikdjadhav](https://github.com/pratikdjadhav)
-- LinkedIn: [Pratik Jadhav](https://linkedin.com/in/pratikdjadhav)
+- LinkedIn: [Pratik Jadhav](https://www.linkedin.com/in/jadhavpratikd/)
 
 ---
 
